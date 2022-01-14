@@ -8,7 +8,7 @@
     <jsp:attribute name="customScript">
         <script>
             $(function () {
-                $("#startDate").datepicker({dateFormat: 'yy/mm/dd'});
+                $("#startDate").datepicker({dateFormat: 'yyyy/MM/dd'});
             });
         </script>
     </jsp:attribute>
@@ -23,11 +23,11 @@
                 <petclinic:inputField label="Weeks Duration" name="weeksDuration"/>
               
                 <div class="control-group">
-                    <petclinic:selectField name="pet" label="Pet" names="${pets}" size="1"/>
+                    <petclinic:selectField name="pet" label="Pet" names="${pets}" size="3"/>
                 </div>
                 
                 <div class="control-group">
-                    <petclinic:selectField name="feedingType" label="Feeding Type" names="${feedingTypes}" size="1"/>
+                    <petclinic:selectField name="feedingType" label="Feeding Type" names="${feedingTypes}" size="3"/>
                 </div>   
             </div>
                        
