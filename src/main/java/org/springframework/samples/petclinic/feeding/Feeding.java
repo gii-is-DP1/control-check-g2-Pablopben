@@ -27,7 +27,7 @@ public class Feeding extends BaseEntity{
     
     @DateTimeFormat(pattern = "yyyy/MM/dd")
     @Column(name = "start_date")
-    @NotEmpty
+    @NotNull
     LocalDate startDate;
 
     @Min(1)

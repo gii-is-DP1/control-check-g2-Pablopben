@@ -6,6 +6,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.samples.petclinic.model.BaseEntity;
@@ -28,7 +29,7 @@ public class FeedingType extends BaseEntity{
     @NotEmpty
     String description;
 
-    @NotEmpty
+    @NotNull
     @ManyToOne   
     @JoinColumn(name = "pet_type_id")
     PetType petType;

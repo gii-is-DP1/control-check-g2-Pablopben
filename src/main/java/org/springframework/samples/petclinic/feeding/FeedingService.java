@@ -32,7 +32,7 @@ public class FeedingService {
         return this.feedingRepository.getTypeByName(typeName);
     }
 
-    @Transactional
+    @Transactional(rollbackFor={UnfeasibleFeedingException.class})
     public Feeding save(Feeding p) throws UnfeasibleFeedingException {
         if(p.getFeedingType().getPetType() != p.getPet().getType()){
             throw new UnfeasibleFeedingException();
