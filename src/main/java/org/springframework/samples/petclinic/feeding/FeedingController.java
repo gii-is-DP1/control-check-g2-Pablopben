@@ -39,7 +39,7 @@ public class FeedingController {
             try{
                 this.feedingService.save(feeding);
             }catch(UnfeasibleFeedingException ex){
-                result.rejectValue("type", "non conformant", "The selected pet cannot be assigned the specified feeding plan");
+                result.rejectValue("feedingType", "non conformant", "The selected pet cannot be assigned the specified plan");
                 return VIEWS_CREATE_OR_UPDATE_FEEDING_FORM;
             }
             return "redirect:/welcome";
